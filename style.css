@@ -466,63 +466,6 @@ nav {
 }
 
 /* ========================================
-   PRESTASI
-======================================== */
-.achievement-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.achievement-card {
-    display: flex;
-    gap: 20px;
-    padding: 25px;
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 20px;
-    transition: 0.4s;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.achievement-card:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.achievement-icon {
-    font-size: 32px;
-    color: #feca57;
-    min-width: 50px;
-}
-
-.achievement-content h3 {
-    color: #fff;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.achievement-place {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.achievement-place i {
-    margin-right: 6px;
-}
-
-.achievement-content ul {
-    padding-left: 18px;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
-}
-
-.achievement-content ul li {
-    margin-bottom: 4px;
-}
-
-/* ========================================
    KEAHLIAN
 ======================================== */
 .skills-container {
@@ -565,7 +508,6 @@ nav {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Warna unik untuk setiap tag - menggunakan nth-child dengan reset per kategori */
 .skill-category .skill-tag:nth-child(1) { background: linear-gradient(135deg, #ff6b6b33, #ee5a2433); border-color: #ff6b6b66; }
 .skill-category .skill-tag:nth-child(2) { background: linear-gradient(135deg, #48dbfb33, #0abde333); border-color: #48dbfb66; }
 .skill-category .skill-tag:nth-child(3) { background: linear-gradient(135deg, #ff9ff333, #f368e033); border-color: #ff9ff366; }
@@ -582,6 +524,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
+    align-items: start;
 }
 
 .contact-info h3 {
@@ -602,6 +545,7 @@ nav {
     color: #48dbfb;
     margin-top: 3px;
     min-width: 24px;
+    flex-shrink: 0;
 }
 
 .contact-item strong {
@@ -616,12 +560,15 @@ nav {
 .contact-item p {
     color: #fff;
     font-size: 16px;
+    margin: 0;
+    word-break: break-word;
 }
 
 .contact-social {
     display: flex;
     gap: 15px;
     margin-top: 30px;
+    flex-wrap: wrap;
 }
 
 .contact-social a {
@@ -636,6 +583,7 @@ nav {
     font-size: 18px;
     transition: 0.3s;
     border: 1px solid rgba(255, 255, 255, 0.06);
+    text-decoration: none;
 }
 
 .contact-social a:hover {
@@ -644,7 +592,6 @@ nav {
     box-shadow: 0 8px 25px rgba(238, 90, 36, 0.3);
 }
 
-/* Contact Form */
 .contact-form h3 {
     color: #fff;
     font-size: 22px;
@@ -674,6 +621,7 @@ nav {
     font-size: 15px;
     font-family: inherit;
     transition: 0.3s;
+    box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -787,11 +735,6 @@ footer {
     
     .edu-year {
         min-width: auto;
-    }
-    
-    .achievement-card {
-        flex-direction: column;
-        align-items: flex-start;
     }
     
     .exp-grid {
